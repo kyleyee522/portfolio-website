@@ -42,12 +42,12 @@ a {
 
 section {
 	/* padding: 10px; */
-	max-width: 1800px;
+	max-width: 1700px;
 }
 
 section h2 {
 	padding-right: 20px;
-	min-width: 400px;
+	min-width: 350px;
 	text-align: right;
 	border-right: 5px solid #445876;
 	/* margin-left: 200px; */
@@ -60,12 +60,15 @@ a:visited {
 	color: #92cccd;
 }
 
+main {
+	background-color: #ededf6;
+	padding-top: 25px;
+}
+
 .hero {
 	display: flex;
 	height: 300px;
 	background-image: url('./images/hero_pattern.jpg');
-	margin-bottom: 25px;
-	/* background-size: cover; */
 	background-position: center;
 	justify-content: flex-end;
 	align-items: flex-end;
@@ -90,49 +93,131 @@ a:visited {
 	padding: 20px 0px;
 }
 
+.about-me-content {
+	font-size: 20px;
+}
+
 .about-me-content,
 .contact-me-details,
 .work-experience-container {
-	/* margin-left: 50px; */
-	/* border-left: 5px solid #445876; */
-	padding: 10px 50px 10px 50px;
-	font-size: 20px;
 	color: #445876;
+	padding-left: 50px;
+}
+
+.work-experience-container {
+	position: relative;
 }
 
 /* The container allows the images to wrap to the next line. */
 .work-experience-container {
 	display: flex;
 	flex-wrap: wrap;
+	/* width: 1300px; */
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
+	/* justify-content: center; */
 }
 
 /* This makes the first application div max height and width which will help cropping the image */
-.first-application {
+/* .first-application {
 	height: 100%;
 	width: 100%;
-}
+} */
 
-/* Crops the first application image to be 600px tall (object-fit: cover allows it to not keep aspect ratio) */
-.first-application img {
+/* .work-experience-container img {
 	object-fit: cover;
 	height: 600px;
 	width: 100%;
+} */
+
+/* Crops the first application image to be 600px tall (object-fit: cover allows it to not keep aspect ratio) */
+/* .work-experience-container img {
+	object-fit: cover;
+	height: 600px;
+	width: 100%;
+	margin-bottom: 20px;
+} */
+
+#first-application {
+	position: relative;
+	/* height: 100%; */
+	/* width: 1200px; */
+	width: 100%;
 }
 
-/* .test {
-	width: 100%;
-	height: 100%;
-} */
-
-/* .test img {
-	width: 100%;
-	height: 700px;
+#first-application img {
 	object-fit: cover;
+	height: 600px;
+	/* width: 1100px; */
+	width: 100%;
+	/* margin-bottom: 20px; */
+	border: 5px solid #92cccd;
+}
+
+.extra-applications {
+	margin-top: 20px;
+	display: flex;
+	position: relative;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.extra-app {
+	position: relative;
+	height: 200px;
+	width: 600px;
+}
+
+.extra-app img {
+	object-fit: cover;
+	height: 200px;
+	width: 600px;
+	border: 5px solid #92cccd;
+}
+
+/* .extra-app::before {
+	content: '';
+	background: #5a7ffb;
+	height: 100%;
+	width: 100%;
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
 } */
 
-.contact-me-section div {
+#first-application::before,
+.extra-app::before {
+	content: '';
+	background: #5a7ffb;
+	height: 100%;
+	width: 100%;
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
+	transition: background 0.3s ease-in-out;
+	margin: 5px;
+}
+
+#first-application:hover::before,
+.extra-app:hover::before {
+	background: none;
+}
+
+/* #first-application {
+	object-fit: cover;
+	height: 600px;
+	width: 100%;
+	margin-bottom: 20px;
+} */
+
+/* Grabs every other img element besides the first one (n+2 means to start from the 2nd img element) */
+/* .work-experience-container img:nth-child(n + 2) {
+	object-fit: cover;
+	height: 200px;
+	width: 48%;
+} */
+
+.contact-me-details {
 	display: flex;
 	align-items: center;
 }

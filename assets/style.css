@@ -97,11 +97,16 @@ main {
 .contact-me-section {
 	display: flex;
 	padding: 20px 0px;
+	/* max-width: 1500px; */
 }
 
 .about-me-content {
 	font-size: 20px;
 }
+
+/* .about-me-content p {
+	width: 1050px;
+} */
 
 .about-me-content,
 .contact-me-details,
@@ -123,26 +128,6 @@ main {
 	/* height: 100%; */
 	/* justify-content: center; */
 }
-
-/* This makes the first application div max height and width which will help cropping the image */
-/* .first-application {
-	height: 100%;
-	width: 100%;
-} */
-
-/* .work-experience-container img {
-	object-fit: cover;
-	height: 600px;
-	width: 100%;
-} */
-
-/* Crops the first application image to be 600px tall (object-fit: cover allows it to not keep aspect ratio) */
-/* .work-experience-container img {
-	object-fit: cover;
-	height: 600px;
-	width: 100%;
-	margin-bottom: 20px;
-} */
 
 #first-application {
 	position: relative;
@@ -239,4 +224,27 @@ main {
 
 .project-title p {
 	padding-top: 10px;
+}
+
+@media screen and (max-width: 1669px) {
+	.about-me-section,
+	.work-experience-section,
+	.contact-me-section {
+		/* display: flex;
+	padding: 20px 0px; */
+		max-width: 1400px;
+	}
+
+	section {
+		max-width: 1200px;
+	}
+
+	/* .work-experience-container {
+		width: 2000px;
+	} */
+
+	.extra-app,
+	.extra-app img {
+		width: 475px;
+	}
 }

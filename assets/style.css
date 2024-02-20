@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	background-color: #31343d;
+	justify-content: space-between;
+}
+
+header h1 {
+	background-color: #92cccd;
+	padding: 15px 10px 15px 25px;
+	color: #31343d;
+	font-size: 48px;
+}
+
+ul {
+	display: flex;
+	list-style-type: none;
+	padding: 25px 75px 25px 25px;
+	color: #92cccd;
+}
+
+ul li {
+	margin: 10px;
+	/* text-decoration: none; */
+	/* border-bottom: 10px solid #92cccd; */
+	font-size: 28px;
+	font-weight: bolder;
+}
+
+a {
+	color: #92cccd;
+	text-decoration: none;
+	padding: 0px 10px;
+	border-bottom: 4px solid #92cccd;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #92cccd;
+}
+
+.hero {
+	display: flex;
+	height: 300px;
+	background-image: url('./images/hero_pattern.jpg');
+	margin-bottom: 25px;
+	/* background-size: cover; */
+	background-position: center;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.hero h2 {
+	/* display: flex; */
+	position: relative;
+	color: #31343d;
+	background-color: #92cccd;
+	/* justify-content: flex-end; */
+	padding: 10px;
+	right: 100px;
+	bottom: 20px;
+}
+
+.about-me-section {
+	display: flex;
+}
+
+.about-me-section h2 {
+	text-align: right;
+	padding: 10px;
+}
+
+.about-me-content {
+	/* margin-left: 50px; */
+	border-left: 5px solid #445876;
+	padding: 10px 75px 10px 50px;
+}

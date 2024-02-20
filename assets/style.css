@@ -13,7 +13,7 @@ header {
 
 header h1 {
 	background-color: #92cccd;
-	padding: 15px 20px 15px 75px;
+	padding: 15px 20px 15px 160px;
 	color: #31343d;
 	font-size: 48px;
 }
@@ -84,6 +84,12 @@ main {
 	right: 100px;
 	bottom: 20px;
 	font-size: 48px;
+}
+
+.hero img {
+	position: absolute;
+	height: 300px;
+	left: 75px;
 }
 
 .about-me-section,
@@ -166,6 +172,7 @@ main {
 	position: relative;
 	height: 200px;
 	width: 600px;
+	/* width: 100%; */
 }
 
 .extra-app img {
@@ -179,9 +186,10 @@ main {
 .extra-app::before {
 	content: '';
 	background: #5a7ffb;
+	/* background: #92cccd; */
 	height: 100%;
 	width: 100%;
-	opacity: 0.5;
+	opacity: 0.4;
 	position: absolute;
 	left: 0;
 	transition: background 0.3s ease-in-out;
@@ -219,7 +227,16 @@ main {
 
 .project-title {
 	position: absolute;
+	color: #31343d;
 	background-color: #92cccd;
-	padding: 30px 30px 30px 50px;
+	padding: 15px 15px 15px 50px;
 	bottom: 20px;
+}
+
+.project-title h3 {
+	font-size: 28px;
+}
+
+.project-title p {
+	padding-top: 10px;
 }

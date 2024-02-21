@@ -10,6 +10,10 @@
 	--textcolor: #445876;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* Navbar */
 header {
 	display: flex;

@@ -4,17 +4,24 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+	--colorprimary: #31343d;
+	--colorsecondary: #92cccd;
+	--textcolor: #445876;
+}
+
+/* Navbar */
 header {
 	display: flex;
 	align-items: center;
-	background-color: #31343d;
+	background-color: var(--colorprimary);
 	justify-content: space-between;
 }
 
 header h1 {
-	background-color: #92cccd;
+	background-color: var(--colorsecondary);
 	padding: 15px 20px 15px 160px;
-	color: #31343d;
+	color: var(--colorprimary);
 	font-size: 48px;
 }
 
@@ -22,42 +29,40 @@ header ul {
 	display: flex;
 	list-style-type: none;
 	padding: 25px 75px 25px 25px;
-	color: #92cccd;
+	color: var(--colorsecondary);
 }
 
 ul li {
 	margin: 10px;
-	/* text-decoration: none; */
-	/* border-bottom: 10px solid #92cccd; */
 	font-size: 28px;
 	font-weight: bolder;
 }
 
 header a {
-	color: #92cccd;
+	color: var(--colorsecondary);
 	text-decoration: none;
 	padding: 0px 10px;
-	border-bottom: 4px solid #92cccd;
+	border-bottom: 4px solid var(--colorsecondary);
 }
 
+/* Sets a container with a unchanging width on every section */
 section {
-	/* padding: 10px; */
 	max-width: 1700px;
 }
 
+/* Formats section headings */
 section h2 {
 	padding-right: 20px;
 	min-width: 350px;
 	text-align: right;
-	border-right: 5px solid #445876;
-	/* margin-left: 200px; */
+	border-right: 5px solid var(--textcolor);
 	font-size: 60px;
-	color: #445876;
+	color: var(--textcolor);
 }
 
 a:visited {
 	text-decoration: none;
-	color: #92cccd;
+	color: var(--colorsecondary);
 }
 
 main {
@@ -65,6 +70,7 @@ main {
 	padding-top: 25px;
 }
 
+/* Adds background image to hero section */
 .hero {
 	display: flex;
 	height: 300px;
@@ -74,12 +80,11 @@ main {
 	align-items: flex-end;
 }
 
+/* Formats the subtitle to the right side of the hero section */
 .hero h2 {
-	/* display: flex; */
 	position: relative;
-	color: #31343d;
-	background-color: #92cccd;
-	/* justify-content: flex-end; */
+	color: var(--colorprimary);
+	background-color: var(--colorsecondary);
 	padding: 10px;
 	right: 100px;
 	bottom: 20px;
@@ -97,7 +102,6 @@ main {
 .contact-me-section {
 	display: flex;
 	padding: 20px 0px;
-	/* max-width: 1500px; */
 	position: relative;
 }
 
@@ -105,48 +109,41 @@ main {
 	font-size: 20px;
 }
 
-/* .about-me-content p {
-	width: 1050px;
-} */
+.about-me-content p {
+	line-height: 30px;
+}
 
 .about-me-content,
 .contact-me-details,
 .work-experience-container {
-	color: #445876;
+	color: var(--textcolor);
 	padding-left: 50px;
 }
-
-/* .work-experience-container {
-	position: relative;
-} */
 
 /* The container allows the images to wrap to the next line. */
 .work-experience-container {
 	display: flex;
 	flex-wrap: wrap;
-	/* width: 1300px; */
-	/* width: 100%; */
-	/* height: 100%; */
-	/* justify-content: center; */
+	width: 100%;
 }
 
+/* Sets the container for the tint on top of the image */
 #first-application {
 	position: relative;
 	height: 600px;
-	/* width: 1200px; */
 	width: 100%;
 	display: inline-block;
 }
 
+/* Formats the image of the first application */
 #first-application img {
 	object-fit: cover;
 	height: 600px;
-	/* width: 1100px; */
 	width: 100%;
-	/* margin-bottom: 20px; */
-	border: 5px solid #92cccd;
+	border: 5px solid var(--colorsecondary);
 }
 
+/* Sets the container for the the extra applications */
 .extra-applications {
 	margin-top: 20px;
 	display: flex;
@@ -155,25 +152,26 @@ main {
 	justify-content: space-between;
 }
 
+/* Sets the container for the tint on top of the image */
 .extra-app {
 	position: relative;
 	height: 200px;
 	width: 600px;
-	/* width: 100%; */
 }
 
+/* Formats the image of the other applications besides the first */
 .extra-app img {
 	object-fit: cover;
 	height: 200px;
 	width: 600px;
-	border: 5px solid #92cccd;
+	border: 5px solid var(--colorsecondary);
 }
 
+/* Adds the blue tint on the images */
 #first-application::before,
 .extra-app::before {
 	content: '';
 	background: #5a7ffb;
-	/* background: #92cccd; */
 	height: 100%;
 	width: 100%;
 	opacity: 0.4;
@@ -183,24 +181,11 @@ main {
 	margin: 5px;
 }
 
+/* Removes the tint when images are hovered */
 #first-application:hover::before,
 .extra-app:hover::before {
 	background: none;
 }
-
-/* #first-application {
-	object-fit: cover;
-	height: 600px;
-	width: 100%;
-	margin-bottom: 20px;
-} */
-
-/* Grabs every other img element besides the first one (n+2 means to start from the 2nd img element) */
-/* .work-experience-container img:nth-child(n + 2) {
-	object-fit: cover;
-	height: 200px;
-	width: 48%;
-} */
 
 .contact-me-details {
 	display: flex;
@@ -209,15 +194,19 @@ main {
 }
 
 .contact-me-details a {
-	color: #445876;
-	border-bottom: 4px solid #445876;
+	color: var(--textcolor);
+	border-bottom: 4px solid var(--textcolor);
 	text-decoration: none;
+}
+
+.contact-me-section > div {
+	display: flex;
 }
 
 .project-title {
 	position: absolute;
-	color: #31343d;
-	background-color: #92cccd;
+	color: var(--colorprimary);
+	background-color: var(--colorsecondary);
 	padding: 15px 15px 15px 50px;
 	bottom: 20px;
 }
@@ -230,6 +219,7 @@ main {
 	padding-top: 10px;
 }
 
+/* Reformats page elements when screen size reaches 1669px or lower */
 @media screen and (max-width: 1669px) {
 	.about-me-section,
 	.work-experience-section,
@@ -237,16 +227,13 @@ main {
 		max-width: 1400px;
 	}
 
-	/* section {
-		max-width: 1200px;
-	} */
-
 	.extra-app,
 	.extra-app img {
 		width: 450px;
 	}
 }
 
+/* Reformats page elements when screen size reaches 1430px or lower */
 @media screen and (max-width: 1430px) {
 	.about-me-section,
 	.work-experience-section,
@@ -276,6 +263,7 @@ main {
 	}
 }
 
+/* Reformats page elements when screen size reaches 1111px or lower */
 @media screen and (max-width: 1111px) {
 	.about-me-section,
 	.work-experience-section,
@@ -290,7 +278,7 @@ main {
 	}
 
 	header ul {
-		padding-right: 25px;
+		padding-right: 15px;
 	}
 
 	section h2 {

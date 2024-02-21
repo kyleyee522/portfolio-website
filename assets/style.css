@@ -18,7 +18,7 @@ header h1 {
 	font-size: 48px;
 }
 
-ul {
+header ul {
 	display: flex;
 	list-style-type: none;
 	padding: 25px 75px 25px 25px;
@@ -33,7 +33,7 @@ ul li {
 	font-weight: bolder;
 }
 
-a {
+header a {
 	color: #92cccd;
 	text-decoration: none;
 	padding: 0px 10px;
@@ -204,12 +204,14 @@ main {
 
 .contact-me-details {
 	display: flex;
+	list-style-type: none;
 	align-items: center;
 }
 
 .contact-me-details a {
 	color: #445876;
 	border-bottom: 4px solid #445876;
+	text-decoration: none;
 }
 
 .project-title {
@@ -252,11 +254,64 @@ main {
 		max-width: 1000px;
 	}
 
+	/* With display of flex, it would make the images bleed outside the container!!!!!! */
+	/* Had to change it to something else so that the first application image would fit inside the container!!!! */
 	.extra-applications {
 		display: inline-block;
 	}
 	.extra-app,
 	.extra-app img {
 		width: 100%;
+	}
+
+	.extra-applications {
+		margin-top: 0px;
+	}
+	.extra-app {
+		margin-top: 20px;
+	}
+
+	.contact-me-details a {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1111px) {
+	.about-me-section,
+	.work-experience-section,
+	.contact-me-section {
+		max-width: 700px;
+	}
+
+	header h1 {
+		padding: 15px 20px 15px 50px;
+
+		font-size: 30px;
+	}
+
+	header ul {
+		padding-right: 25px;
+	}
+
+	section h2 {
+		font-size: 40px;
+		min-width: 150px;
+	}
+
+	ul li {
+		font-size: 20px;
+	}
+
+	.hero h2 {
+		font-size: 32px;
+		right: 50px;
+	}
+
+	.hero img {
+		left: 25px;
+	}
+
+	.contact-me-details a {
+		font-size: 16px;
 	}
 }
